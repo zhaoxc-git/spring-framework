@@ -1,10 +1,11 @@
 package com.zxc.learn;
 
 import com.zxc.learn.bean.Config;
-import com.zxc.learn.custom.MyBeanNameGenerator;
 import com.zxc.learn.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
 
 /**
  * @author simon
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
 
 	public static void main(String[] args) {
+
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 		UserService service = context.getBean(UserService.class);
 		log.info(service.toString());
